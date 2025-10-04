@@ -10,6 +10,7 @@ Technologies Used:
 - CSS
 
 To clone this repository:
+
 git clone https://github.com/ioniq25/cars_and_coffee.git
 
 Contributors: Kyle Danielle Rionne Santos and Rafael Tibi
