@@ -47,7 +47,7 @@ nav a.active {
   color:#000;
 }
 
-/* Hero section */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -62,12 +62,12 @@ nav a.active {
   box-sizing: border-box;
 }
 
-/* Specific hero style for signup page */
+
 .hero.signup-hero {
-  padding: 190px 0 40px; /* Slightly higher than other pages */
+  padding: 190px 0 40px;
 }
 
-/* Base container styles */
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -99,7 +99,7 @@ nav a.active {
   z-index: 1;
 }
 
-/* Carousel styles */
+
 .carousel {
   max-width: 800px;
   margin: 0 auto 2rem;
@@ -129,7 +129,7 @@ nav a.active {
   bottom: 20px;
 }
 
-/* Grid layout for larger screens */
+
 .car-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -216,7 +216,7 @@ header.overlay h1 {
   margin-top:2rem;
 }
 
-/* Bootstrap overrides for better integration */
+
 .navbar-toggler {
   border: none;
   background: rgba(255,255,255,0.3);
@@ -239,7 +239,7 @@ header.overlay h1 {
   border-radius: 8px;
 }
 
-/* Ensure cards align horizontally inside the glass on wide screens */
+
 .center-pill .cards {
   justify-content:space-between;
   flex-wrap:nowrap;
@@ -253,7 +253,7 @@ header.overlay h1 {
   }
 }
 
-/* Bootstrap form styling overrides */
+
 .form-control {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.3);
@@ -285,7 +285,7 @@ header.overlay h1 {
   color: #000;
 }
 
-/* Make welcome text more readable without changing layout */
+
 .center-pill p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   color: #fff !important;
