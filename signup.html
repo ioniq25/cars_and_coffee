@@ -5,28 +5,60 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sign Up — Cars and Coffee</title>
 <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="overlay">
   <h1 class="pill">Cars and Coffee</h1>
-  <nav class="pill">
-    <a href="index.html">Home</a>
-    <a href="carmeets.html">Car Meets</a>
-    <a href="about.html">About Us</a>
-    <a href="signup.html" class="active">Sign Up</a>
+  <nav class="navbar navbar-expand-lg pill">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carmeets.html">Car Meets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coffee.html">Coffee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
 
-<section class="hero" style="background-image:url('images/bg4.png')">
-  <div class="glass">
-    <h2>Sign Up</h2>
-    <form class="signup-form">
-      <label>Name<br><input type="text" required></label><br><br>
-      <label>Email<br><input type="email" required></label><br><br>
-      <button type="submit">Join Us</button>
-    </form>
+<section class="hero signup-hero" style="background-image:url('images/bg4.png')">
+  <div class="container">
+    <div class="center-pill">
+      <h2 class="text-center mb-4">Join Our Community</h2>
+      <p class="lead text-center mb-5">Sign up to stay updated on upcoming events and special offers</p>
+      <form class="signup-form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-primary btn-lg px-4 py-2">Join Us</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -34,5 +66,7 @@
   &copy; 2025 Cars and Coffee — All Rights Reserved
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
