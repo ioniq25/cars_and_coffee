@@ -8,6 +8,7 @@ Github Link: https://github.com/ioniq25/cars_and_coffee.git
 Technologies Used:
 - HTML
 - CSS
+- BOOTSTRAP
 - JAVASCRIPT
 
 To clone this repository:
