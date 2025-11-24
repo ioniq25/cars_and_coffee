@@ -1,38 +1,25 @@
-window.onload = function() {
-   
-    var myCarousel = document.getElementById('carouselExample');
-    if (myCarousel) {
-       
-        var carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 3000 
-        });
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".signup-form");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "") {
+      alert("Name is required.");
+      return;
     }
 
-   
-    var signupForm = document.querySelector('.signup-form');
-    if (signupForm) {
-        signupForm.onsubmit = function(event) {
-          
-            var name = document.getElementById('name');
-            var email = document.getElementById('email');
-            
-           
-            if (!name.value || !email.value) {
-                alert('Please fill in all fields!');
-                event.preventDefault();
-                return false;
-            }
-            
-          
-            if (!email.value.includes('@')) {
-                alert('Please enter a valid email!');
-                event.preventDefault();
-                return false;
-            }
-            
-     
-            alert('Thanks for signing up, ' + name.value + '!');
-            return true;
-        };
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
     }
-};
+
+    alert("Thank you for signing up, " + name + "!");
+    form.reset();
+  });
+});
