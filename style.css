@@ -20,6 +20,11 @@ body {
 .header-pill {
   text-align: center;
   margin-top: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.header-spacer {
+  height: 250px; /* adjust as needed */
 }
 
 .title-pill {
@@ -65,12 +70,13 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 220px 0 40px;
+  padding: 100px 0 40px;
+  padding-top: 250px;
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
@@ -78,11 +84,19 @@ body {
 
 
 .signup-hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 220px;
+  padding-bottom: 40px;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.05);
 }
+
+
 
 .hero::after {
     content: "";
@@ -235,6 +249,9 @@ header.overlay h1 {
   font-family:'Alkatra',cursive;
   font-size:56px;
   color:#000;
+  position: relative;
+  padding-top: 20px;
+  z-index: 10;
 }
 
 .hero .glass p {
@@ -374,4 +391,31 @@ footer.glass {
   max-width:none;
   margin:0;
   border-radius:0;
+
+}
+
+#form-messages {
+  margin-top: 1rem;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  display: none;
+}
+
+#form-messages.error {
+  display: block;
+  background: rgba(255, 60, 60, 0.15);
+  border-left: 4px solid #ff3c3c;
+  color: #ffb3b3;
+}
+
+#form-messages.success {
+  display: block;
+  background: rgba(0, 255, 90, 0.15);
+  border-left: 4px solid #00d46a;
+  color: #b6ffcf;
+}
+
+.page-offset {
+  padding-top: 220px; /* Height of title + nav pill */
 }

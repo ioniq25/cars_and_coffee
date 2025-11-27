@@ -1,45 +1,72 @@
-// signup form validation with regex including inline error messages
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector(".signup-form");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const nameError = document.getElementById("nameError");
-  const emailError = document.getElementById("emailError");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#signupForm");
+  const nameInput = document.querySelector("#name");
+  const emailInput = document.querySelector("#email");
+  const messageBox = document.querySelector("#form-messages");
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault(); // this stops form from submitting
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    messageBox.innerHTML = "";
+    messageBox.className = "";
+    messageBox.style.display = "none";
 
-    // this clears old error messages
-    nameError.textContent = "";
-    emailError.textContent = "";
+    let errors = [];
 
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-
-    // regex for email validation, basic patterns only
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    let hasError = false;
-
-    // name check
-    if (name === "") {
-      nameError.textContent = "Name is required.";
-      hasError = true;
+    if (nameInput.value.trim().length < 2) {
+      errors.push("Please enter your full name.");
     }
 
-    // email check
-    if (email === "") {
-      emailError.textContent = "Email is required.";
-      hasError = true;
-    } else if (!emailRegex.test(email)) {
-      emailError.textContent = "Please enter a valid email address.";
-      hasError = true;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value.trim())) {
+      errors.push("Please enter a valid email address.");
     }
 
-    // checking if everything is valid
-    if (!hasError) {
-      alert("Thank you for signing up, " + name + "!");
-      form.reset(); // clears the form after success submittion
+    if (errors.length > 0) {
+      messageBox.classList.add("error");
+      messageBox.style.display = "block";
+      messageBox.innerHTML = errors.join("<br>");
+      return;
     }
+
+    messageBox.classList.add("success");
+    messageBox.style.display = "block";
+    messageBox.innerHTML = "Thank you for signing up!";
+    form.reset();
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#signupForm");
+  const nameInput = document.querySelector("#name");
+  const emailInput = document.querySelector("#email");
+  const messageBox = document.querySelector("#form-messages");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    messageBox.innerHTML = "";
+    messageBox.className = "";
+    messageBox.style.display = "none";
+
+    let errors = [];
+
+    if (nameInput.value.trim().length < 2) {
+      errors.push("Please enter your full name.");
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value.trim())) {
+      errors.push("Please enter a valid email address.");
+    }
+
+    if (errors.length > 0) {
+      messageBox.classList.add("error");
+      messageBox.style.display = "block";
+      messageBox.innerHTML = errors.join("<br>");
+      return;
+    }
+
+    messageBox.classList.add("success");
+    messageBox.style.display = "block";
+    messageBox.innerHTML = "Thank you for signing up!";
+    form.reset();
   });
 });
