@@ -19,46 +19,42 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="carmeets.html">Car Meets</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="coffee.html">Coffee</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="carmeets.html">Car Meets</a></li>
+          <li class="nav-item"><a class="nav-link" href="coffee.html">Coffee</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="signup.html">Sign Up</a></li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
 
-
 <section class="hero signup-hero" style="background-image:url('images/bg4.png')">
   <div class="container">
     <div class="center-pill">
       <h2 class="text-center mb-4">Join Our Community</h2>
       <p class="lead text-center mb-5">Sign up to stay updated on upcoming events and special offers</p>
+
       <form class="signup-form">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" id="name" required>
+          <span id="nameError" class="error d-none"></span>
         </div>
+
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <input type="email" class="form-control" id="email" required>
+          <span id="emailError" class="error d-none"></span>
         </div>
+
         <div class="text-center mt-4">
           <button type="submit" class="btn btn-primary btn-lg px-4 py-2">Join Us</button>
         </div>
       </form>
+     
+      <div id="successMessage" class="success d-none text-center mt-3"></div>
     </div>
   </div>
   <div id="form-messages"></div>
