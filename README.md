@@ -25,8 +25,8 @@ Project Timeline
 - Week 9-10: Added new tab "Coffee" section.
 - Week 11: Cleaned CSS.
 - Week 12: Updated script.js: Added regex for for better signup validation.
-	   Added inline comments in JavaScript for clarity.
-	   Final testing and documentation updates.
+	       Added inline comments in JavaScript for clarity.
+	       Final testing and documentation updates.
 	   
 ---
 
@@ -41,6 +41,9 @@ Updates Made
 - script.js: Added regex validation for email in the signup form.  
 - script.js: Added inline comments to explain each function and step.  
 - README.md: Updated to include timeline and note about script.js changes.
+- script.js Updated with ARIA.
+- script.js Updated with Thankyou Screen.
+- signup.html Updated with inline styling.
 
 --
 
